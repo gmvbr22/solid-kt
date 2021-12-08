@@ -2,6 +2,7 @@ package dev.gmvbr.solid
 
 fun main() {
     principleSRP()
+    principleOCP()
 }
 
 fun principleSRP() {
@@ -21,4 +22,15 @@ fun principleSRP() {
 
     val taskPrinter = TaskPrinter()
     taskPrinter.printTask(task)
+}
+
+fun principleOCP(){
+
+    val client = Client()
+    client.show(DesktopView())
+    client.show(WebView())
+
+    val device = Device()
+    device.show(WebClient())
+    device.show(DesktopClient())
 }

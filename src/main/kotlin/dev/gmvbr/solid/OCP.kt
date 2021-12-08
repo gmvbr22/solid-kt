@@ -1,6 +1,6 @@
 package dev.gmvbr.solid
 
-// wrong
+// Errado
 // Se você tentar criar um novo view para o client, terá que modificar o Client
 // Assim violando o princípio
 
@@ -24,7 +24,7 @@ class Client {
     }
 }
 
-// correct
+// Correto
 // Você pode adicionar um novo tipo de visualização, tornando aberto a extensão
 // Apenas implementando a interface ClientView, não precisando modificar o Device
 

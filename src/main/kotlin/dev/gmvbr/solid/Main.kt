@@ -3,6 +3,7 @@ package dev.gmvbr.solid
 fun main() {
     principleSRP()
     principleOCP()
+    principleLSP()
 }
 
 fun principleSRP() {
@@ -33,4 +34,17 @@ fun principleOCP(){
     val device = Device()
     device.show(WebClient())
     device.show(DesktopClient())
+}
+
+fun principleLSP(){
+
+    val name = "test"
+
+    val storage = Storage()
+    val fileStorage = FileStorage()
+
+    val config = Config()
+    config.save(fileStorage, name)
+
+    config.save(storage, name)
 }
